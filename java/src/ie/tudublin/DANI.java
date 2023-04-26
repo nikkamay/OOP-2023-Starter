@@ -26,20 +26,28 @@ public class DANI extends PApplet {
        
 	}
 
-	
+	public String[] findWord(){
+        return null;
+    }
 
     public void loadFile()
     {
-		// loadStrings("filename.txt"); // Load a text file into a String array
-		// split(line, ' '); // Split a string into an array of words
-		// w.replaceAll("[^\\w\\s]",""); // Remove punction characters
-		// s.toLowerCase() // Convert a string to lower case 
-        
+		String[] lines = loadStrings("small.txt"); //Load a text file into a String array
+
+		 
+		for (int i = 0; i < lines.length; i++) {
+			String[] splittedWords = split(lines[i], ' '); // Split a string into an array of words
+			String changedLines = splittedWords[i].replaceAll("[^\\w\\s]","").toLowerCase(); // Remove punction characters and convert to lower case
+			
+			System.out.println(changedLines);
+		}
+		 
     }
 
 
 
 	public void keyPressed() {
+
 
 	}
 
@@ -52,6 +60,7 @@ public class DANI extends PApplet {
 		noStroke();
 		textSize(20);
         textAlign(CENTER, CENTER);
+		loadFile();
         
 	}
 }
