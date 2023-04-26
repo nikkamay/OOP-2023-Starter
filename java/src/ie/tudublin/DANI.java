@@ -30,6 +30,8 @@ public class DANI extends PApplet {
         return null;
     }
 
+
+	
     public void loadFile()
     {
 		String[] lines = loadStrings("small.txt"); //Load a text file into a String array
@@ -37,9 +39,13 @@ public class DANI extends PApplet {
 		 
 		for (int i = 0; i < lines.length; i++) {
 			String[] splittedWords = split(lines[i], ' '); // Split a string into an array of words
-			String changedLines = splittedWords[i].replaceAll("[^\\w\\s]","").toLowerCase(); // Remove punction characters and convert to lower case
+			for(int j=0; j < splittedWords.length; j++)
+			{
+				String changedLines = splittedWords[j].replaceAll("[^\\w\\s]","").toLowerCase(); // Remove punction characters and convert to lower case
+				System.out.print(changedLines + " "); // Print each modified word followed by a space
+			}
 			
-			System.out.println(changedLines);
+			System.out.println();
 		}
 		 
     }
@@ -60,7 +66,6 @@ public class DANI extends PApplet {
 		noStroke();
 		textSize(20);
         textAlign(CENTER, CENTER);
-		loadFile();
         
 	}
 }
