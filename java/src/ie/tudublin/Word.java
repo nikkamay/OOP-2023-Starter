@@ -11,11 +11,20 @@ public class Word {
     private String word;
     ArrayList<Follow> follow = new ArrayList<Follow>();
 
-    public Word(String word)
-    {
 
+    public Word(String word) {
+        this.word = word;
     }
-   public String[] findFollow()
+
+    public String getWord() {
+        return word;
+    }
+
+    public void setWord(String word) {
+        this.word = word;
+    }
+
+   public String[] findFollow(String word)
    {
 
     return null;

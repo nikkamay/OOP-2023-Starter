@@ -34,6 +34,9 @@ public class Follow {
             this.count = count;
         }
 
+        public String toString(){
+            return word + "(" + count +")";
+        }
 
     
     

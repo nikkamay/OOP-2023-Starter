@@ -57,7 +57,7 @@ public class DANI extends PApplet {
 		// press space bar
 		if(keyPressed){
 			if (key == ' '){
-				//sonnet code
+				writeSonnet();
 			}
 		} 
 
