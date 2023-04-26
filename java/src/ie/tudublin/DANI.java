@@ -22,6 +22,7 @@ public class DANI extends PApplet {
 
 	public void setup() {
 		colorMode(HSB);
+		loadFile();
 
        
 	}
@@ -53,7 +54,12 @@ public class DANI extends PApplet {
 
 
 	public void keyPressed() {
-
+		// press space bar
+		if(keyPressed){
+			if (key == ' '){
+				//sonnet code
+			}
+		} 
 
 	}
 
